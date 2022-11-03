@@ -1,0 +1,90 @@
+{
+	"articles": [
+		{
+			"slug": "test-one",
+			"title": "test one",
+			"description": "test two",
+			"body": "test two",
+			"tagList": [],
+			"createdAt": "2022-10-10T14:36:47.188Z",
+			"updatedAt": "2022-10-10T14:36:47.188Z",
+			"favorited": false,
+			"favoritesCount": 0,
+			"author": {
+				"username": "testbalaji",
+				"bio": null,
+				"image": "https://api.realworld.io/images/smiley-cyrus.jpeg",
+				"following": false
+			}
+		},
+		{
+			"slug": "test-two",
+			"title": "test two",
+			"description": "test two",
+			"body": "test two",
+			"tagList": [],
+			"createdAt": "2022-10-10T14:36:47.188Z",
+			"updatedAt": "2022-10-10T14:36:47.188Z",
+			"favorited": false,
+			"favoritesCount": 0,
+			"author": {
+				"username": "testbalaji",
+				"bio": null,
+				"image": "https://api.realworld.io/images/smiley-cyrus.jpeg",
+				"following": false
+			}
+		},
+		{
+			"slug": "test-three",
+			"title": "test three",
+			"description": "test two",
+			"body": "test two",
+			"tagList": [],
+			"createdAt": "2022-10-10T14:36:47.188Z",
+			"updatedAt": "2022-10-10T14:36:47.188Z",
+			"favorited": false,
+			"favoritesCount": 0,
+			"author": {
+				"username": "testbalaji",
+				"bio": null,
+				"image": "https://api.realworld.io/images/smiley-cyrus.jpeg",
+				"following": false
+			}
+		},
+		{
+			"slug": "test-four",
+			"title": "test four",
+			"description": "test two",
+			"body": "test two",
+			"tagList": [],
+			"createdAt": "2022-10-10T14:36:47.188Z",
+			"updatedAt": "2022-10-10T14:36:47.188Z",
+			"favorited": false,
+			"favoritesCount": 0,
+			"author": {
+				"username": "testbalaji",
+				"bio": null,
+				"image": "https://api.realworld.io/images/smiley-cyrus.jpeg",
+				"following": false
+			}
+		},
+		{
+			"slug": "test-five",
+			"title": "test five",
+			"description": "test two",
+			"body": "test two",
+			"tagList": [],
+			"createdAt": "2022-10-10T14:36:47.188Z",
+			"updatedAt": "2022-10-10T14:36:47.188Z",
+			"favorited": false,
+			"favoritesCount": 0,
+			"author": {
+				"username": "testbalaji",
+				"bio": null,
+				"image": "https://api.realworld.io/images/smiley-cyrus.jpeg",
+				"following": false
+			}
+		}
+	
+	]
+}

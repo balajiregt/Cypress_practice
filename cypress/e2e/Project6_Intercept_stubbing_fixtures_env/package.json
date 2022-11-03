@@ -1,0 +1,16 @@
+{
+  "name": "project6_intercept_stubbing_fixtures_env",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^10.9.0",
+    "cypress-audit": "^1.1.0",
+    "cypress-xpath": "^2.0.1"
+  }
+}
