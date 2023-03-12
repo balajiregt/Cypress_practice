@@ -1,4 +1,3 @@
-
 describe('testing cypress studio', () => {
     it('test1', () => {
         cy.visit('http://www.uitestingplayground.com/sampleapp')

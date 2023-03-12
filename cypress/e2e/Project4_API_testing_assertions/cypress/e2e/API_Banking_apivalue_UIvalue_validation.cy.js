@@ -7,8 +7,6 @@ describe("sanity bankingapp", () => {
 
     it('Prelogin', () => {
         cy.visit('https://qbank.accelq.com')
-
-
         cy.xpath('/html/body/div[1]/div[2]/div[1]/div/div[2]/div/div[2]/div/form/div[2]/input[1]')
             .should('have.class', 'active')
             .should('have.attr', 'checked')

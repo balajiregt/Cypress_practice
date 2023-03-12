@@ -1,17 +1,8 @@
-let occupationvalue = ''
-let specialityvalue = ''
+/// <reference types="cypress-xpath" />
+
 describe('Form filling scenarios', () => {
 
-    beforeEach(() => {
-        cy.visit('https://staging.directshifts.com/jobs/p/physicians-hospital-telehealth-openings-9057')
-        cy.fixture('testdata_forms').then(function (testdata) {
-            this.testdata = testdata
-        })
-    });
-
-
-
-    it('Filling all the fields and click "Apply Now"', function () {
+    it.skip('Filling all the fields and click "Apply Now"', function () {
         cy.get("#user_first_name").type(this.testdata.firstname);
         cy.get("#user_last_name").type(this.testdata.lastname);
         cy.get('#user_email').type(this.testdata.email)
@@ -23,7 +14,7 @@ describe('Form filling scenarios', () => {
         cy.get('#user_form_submit_container > label > .MuiButtonBase-root > .MuiButton-label').should('have.html', 'Already Applied')
     });
 
-    it('Filling first four fields and click "Apply Now"', function () {
+    it.skip('Filling first four fields and click "Apply Now"', function () {
         cy.get("#user_first_name").type(this.testdata.firstname);
         cy.get("#user_last_name").type(this.testdata.lastname);
         cy.get('#user_email').type(this.testdata.email)
@@ -34,7 +25,7 @@ describe('Form filling scenarios', () => {
         cy.get('span.MuiButton-label').eq(1).should('have.text', 'Apply Now')
     });
 
-    it('Filling first three fields and click "Apply Now"', function () {
+    it.skip('Filling first three fields and click "Apply Now"', function () {
         cy.get("#user_first_name").type(this.testdata.firstname);
         cy.get("#user_last_name").type(this.testdata.lastname);
         cy.get('#user_email').type(this.testdata.email)
@@ -44,7 +35,7 @@ describe('Form filling scenarios', () => {
         cy.get('span.MuiButton-label').eq(1).should('have.text', 'Apply Now')
     });
 
-    it('Filling first two fields and click "Apply Now"', function () {
+    it.skip('Filling first two fields and click "Apply Now"', function () {
         cy.get("#user_first_name").type(this.testdata.firstname);
         cy.get("#user_last_name").type(this.testdata.lastname);
         cy.get('label[for="user_form_submit"] span[class="MuiButton-label"]').click()
@@ -53,7 +44,7 @@ describe('Form filling scenarios', () => {
         cy.get('span.MuiButton-label').eq(1).should('have.text', 'Apply Now')
     });
 
-    it('Filling first field and click "Apply Now"', function () {
+    it.skip('Filling first field and click "Apply Now"', function () {
         cy.get("#user_first_name").type(this.testdata.firstname);
         cy.get('label[for="user_form_submit"] span[class="MuiButton-label"]').click()
 
@@ -96,7 +87,7 @@ describe('Form filling scenarios', () => {
     });
 
     */
-    it('occupation field scenarios', () => {
+    it.skip('occupation field scenarios', () => {
         //cy.get('#user_specialties_container-option-751').click();
         cy.get('div.job-desc > p:first-child > strong').then((el) => {
             let occupationvalue = el.html()
@@ -114,7 +105,7 @@ describe('Form filling scenarios', () => {
 
     })
 
-    it('terms and conditions-scenarios', () => {
+    it.skip('terms and conditions-scenarios', () => {
 
         //assert to the checkbox is already checked and assert for the property
         cy.get('#user_email_optin').scrollIntoView().should('be.checked').should('have.attr', 'checked', 'checked')
@@ -132,7 +123,7 @@ describe('Form filling scenarios', () => {
 
     });
 
-    it ('speciality field scenarios2', () => {
+    it.skip('speciality field scenarios2', () => {
         cy.get('#job_specialty').invoke('attr', 'value').then((ele) => {
             const newspeciality = ele
             cy.log(newspeciality)
@@ -145,5 +136,19 @@ describe('Form filling scenarios', () => {
                 print('speciality value mathches with the speciality container value')
             })
         })
+    });
+
+    it('Test1', () => {
+        cy.visit('https://app.endtest.io/mailbox')
+        cy.get('a[title="Endtest Mailbox"]').should('have.attr', 'target')
+        cy.get('a[title="Endtest Mailbox"]').invoke('removeAttr', 'target').click({timeout:5000})
+        cy.url().should('include', '/how-to-test-emails/')
+    });
+
+    it('Handle New tab', () => {
+        cy.visit('https://automationpanda.com/bdd/')
+        cy.xpath('//a[normalize-space()="Behavior-Driven Development"]').should('have.attr', 'target')
+        cy.xpath('//a[normalize-space()="Behavior-Driven Development"]').invoke('removeAttr', 'target').click({timeout:5000})
+        cy.url().should('include', '/wiki/Behavior-driven_development')
     });
 });

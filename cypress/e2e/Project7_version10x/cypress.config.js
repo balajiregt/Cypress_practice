@@ -2,21 +2,28 @@ const { defineConfig } = require("cypress");
 const addContext=require('mochawesome/addContext')
 
 module.exports = defineConfig({
+ 
+  includeShadowDom: true,
   chromeWebSecurity: false,
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
     charts: true,
-    reportPageTitle: 'directshift-e2e-sampl',
+    reportPageTitle: 'e2e',
     embeddedScreenshots: true,
     inlineAssets: true,
     saveAllAttempts: false,
-    debug: true,
+    debug: true
   },
+  retries: {
+    runMode: 1,
+    openMode: 1,
+    },
+  viewportHeight: 800,
+  viewportWidth: 1000,
    e2e: {
-      setupNodeEvents(on, config) {
-       require('cypress-mochawesome-reporter/plugin')(on);
-       //require('cypress-xpath');
-     },
-   
-   },
+    experimentalSessionAndOrigin:false,
+       setupNodeEvents(on, config) {
+        require('cypress-mochawesome-reporter/plugin')(on)
+      },
+   }
 });

@@ -73,7 +73,6 @@ describe('sanity title', () => {
         cy.get('div[data-component-type="s-search-result"] a >span[class$="a-size-medium a-color-base a-text-normal"]')
             .each(($el) => {
                 countitem = $el.length
-                cy.log($el.text())
                     //expect($el.text()).to.include(searchitem)
 
                     .then(($el) => {

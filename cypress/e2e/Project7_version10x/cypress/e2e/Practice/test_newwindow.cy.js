@@ -1,5 +1,5 @@
 describe('testtab', () => {
-  var newwindowurl
+
     it('Handling new Browser Window', function() {
         cy.visit('https://alapanme.github.io/testing-cypress.html')
         cy.window().then((win) => {
@@ -10,10 +10,10 @@ describe('testtab', () => {
         cy.get('button').click()
         cy.get('@popup')
           .should("be.called")
-      })
+    })
 
       it('action in new browser window', () => {
-        cy.visit(newwindowurl)
+        cy.url('https://the-internet.herokuapp.com/')
         cy.get('h1')
         .should('have.text', 'Welcome to the-internet')
       });

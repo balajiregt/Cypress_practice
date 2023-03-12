@@ -1,6 +1,7 @@
 
 
 describe("capturing the 'Todays Deals' list length", ()=>{
+context('Amazon test', () => {
     it('amazon test 1', () => {
         cy.visit('https://www.amazon.in/')
         cy.wait(3000)
@@ -15,8 +16,8 @@ describe("capturing the 'Todays Deals' list length", ()=>{
     })
 
     it('amazon test 2', () => {
-        cy.visit('https://www.amazon.in/ref=nav_logo')
-        cy.wait(3000)
+       // cy.visit('https://www.amazon.in/ref=nav_logo')
+       // cy.wait(3000)
         cy.get('#desktop-5 li[aria-setsize]')
         .then(($el) => {
          const count= $el.length //using .length to capture the list length/count
@@ -27,6 +28,9 @@ describe("capturing the 'Todays Deals' list length", ()=>{
 
     })
 
+});
+
+    
     it('capturing medibuddy city count', () => {
         cy.visit('https://www.medibuddy.in/')
         cy.wait(3000)

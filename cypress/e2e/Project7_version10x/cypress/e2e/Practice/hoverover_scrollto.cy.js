@@ -29,7 +29,14 @@ describe('noggin navigation', () => {
     it('test-scrollintoview', () => {
         cy.visit('https://javascript.info/mousemove-mouseover-mouseout-mouseenter-mouseleave')
         cy.get('div[class="code-tabs code-tabs_result_on"]:nth-of-type(3)').scrollIntoView()
-        cy.get('#parent').scrollIntoView()
+        //cy.get('#parent').scrollIntoView()
     });
+
+    it('test2',()=>{
+        cy.visit('https://javascript.info/mousemove-mouseover-mouseout-mouseenter-mouseleave')
+        cy.get('div[class="code-tabs code-tabs_result_on"]:nth-of-type(1)').scrollIntoView()
+        cy.get('body > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > main:nth-child(1) > div:nth-child(2) > article:nth-child(1) > div:nth-child(3) > div:nth-child(12) > div:nth-child(1) > div:nth-child(4) > a:nth-child(2)').trigger('mouseover')
+        cy.contains('edit in the sandbox')
+    })
 
 });

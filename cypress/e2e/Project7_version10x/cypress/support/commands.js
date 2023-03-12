@@ -31,8 +31,8 @@ Cypress.Commands.add("userInput", (username,password) => {
     return
  });
 
- import addContext from "mochawesome/addContext"
-
+ 
+import addContext from "mochawesome/addContext"
 Cypress.Commands.add("addContext", (context) => {
   cy.once("test:after:run", (test) => addContext({ test }, context))
 })
