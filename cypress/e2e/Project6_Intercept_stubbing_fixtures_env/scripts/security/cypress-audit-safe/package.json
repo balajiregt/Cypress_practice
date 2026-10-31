@@ -1,0 +1,20 @@
+{
+  "name": "@workspace-security/cypress-audit-safe",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "main": "index.cjs",
+  "files": [
+    "index.cjs",
+    "commands.js",
+    "src",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "dependencies": {
+    "lighthouse": "13.6.0",
+    "pa11y": "10.0.0",
+    "puppeteer": "25.16.0",
+    "pa11y-runner-axe": "2.0.1"
+  }
+}

@@ -1,0 +1,24 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 3
+  - package-ecosystem: npm
+    directories:
+      - /
+      - /cypress/e2e/Project1_BDD_cucumber
+      - /cypress/e2e/Project2_windowalert
+      - /cypress/e2e/Project3_POM_childwindow_hrefattr
+      - /cypress/e2e/Project4_API_testing_assertions
+      - /cypress/e2e/Project5_selectorsRelation_arraylist
+      - /cypress/e2e/Project6_Intercept_stubbing_fixtures_env
+      - /cypress/e2e/Project7_version10x
+      - /cypress/e2e/Project9_retries
+      - /cypress/e2e/project10_visual_testing
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7
+    open-pull-requests-limit: 5
