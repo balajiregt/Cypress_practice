@@ -1,0 +1,5 @@
+# The original source URL was never recorded. Keep the exact gitlink in place.
+# This module is not initialized or fetched by security CI.
+[submodule "Project8_POM_version10x"]
+	path = cypress/e2e/Project8_POM_version10x
+	active = false

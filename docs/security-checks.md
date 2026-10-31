@@ -37,3 +37,5 @@ support patched dependencies directly. Their use is not a claim that upstream wa
 fixed. Review those small patches when updating the toolchain.
 
 GoRest examples require a local GOREST_TOKEN through CYPRESS_GOREST_TOKEN. Revoke the formerly tracked token at GoRest; deleting it here does not remove historical copies. Authenticated request logging is disabled.
+
+Project8 retains its original gitlink commit and path. The pre-existing source URL was missing; .gitmodules now records the path so credential cleanup can enumerate it safely. Security CI does not initialize or fetch it. Restore the correct source URL before using that project; no URL was guessed.
