@@ -1,0 +1,12 @@
+[
+  {
+    "archive": "minimatch-compat.tgz",
+    "source": "minimatch-compat",
+    "sha256": "d1e005ffa5aeb3761a657255297222b4f4237ecd5d6f0eeebcd0681bd6510d5f"
+  },
+  {
+    "archive": "cypress-audit-safe.tgz",
+    "source": "cypress-audit-safe",
+    "sha256": "b01dd23e8dc796778e0510f1c3c9f8dc63c60be6ab51eb8771d5b43ace238fe1"
+  }
+]

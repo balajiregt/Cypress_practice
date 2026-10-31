@@ -1,0 +1,19 @@
+
+# Install reproducibly from package-lock.json; never commit dependencies.
+node_modules/
+
+# Security tooling and generated runtime state
+artifacts/
+node_modules/
+.next/
+dist/
+target/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+
+# Reviewed local security archives are source inputs, not build output.
+!**/scripts/security/*.tgz

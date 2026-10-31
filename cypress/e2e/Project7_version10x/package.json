@@ -10,16 +10,20 @@
   "license": "ISC",
   "devDependencies": {
     "@cypress/webpack-preprocessor": "^5.12.2",
-    "cypress": "^10.10.0",
+    "cypress": "15.21.1",
     "cypress-iframe": "^1.0.1",
     "cypress-log-to-output": "^1.1.2",
-    "cypress-mochawesome-reporter": "^3.2.2",
+    "cypress-mochawesome-reporter": "5.0.0",
     "cypress-xpath": "^2.0.1"
   },
   "dependencies": {
-    "cypress-real-events": "^1.7.1",
+    "cypress-real-events": "1.15.1",
     "emoji.json": "^13.1.0",
     "mocha": "^10.0.0",
     "react-share": "^4.4.0"
+  },
+  "overrides": {
+    "minimatch": "file:./scripts/security/minimatch-compat.tgz",
+    "serialize-javascript": "7.1.4"
   }
 }

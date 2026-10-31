@@ -1,13 +1,16 @@
 //https://gorest.co.in/access-token
-let tokenvalue = 'de9258d4af357f730c648b4ea86bc5f98b80072ac07e7fcc14b70ca0ce8457ba'
+const tokenvalue = Cypress.env('GOREST_TOKEN');
+before(() => { if (typeof tokenvalue !== 'string' || !tokenvalue) throw new Error('Set GOREST_TOKEN in your local test environment'); });
 let createdid
 describe('sanity bankingapp', () => {
 
 it('POST-Create user, Delete- Created user', () => {
 
     cy.request({
+        log: false,
+        headers: { Authorization: 'Bearer ' + tokenvalue },
         method: 'POST',
-        url: 'https://gorest.co.in/public/v1/users' + '?' + 'access-token=' + tokenvalue,
+        url: 'https://gorest.co.in/public/v1/users',
         // headers: {
         //   'Authorization': 'Bearer ' + token
 
@@ -30,8 +33,10 @@ it('POST-Create user, Delete- Created user', () => {
         cy.log(JSON.stringify(response.body))
         cy.log(createdid)
         cy.request({
+        log: false,
+        headers: { Authorization: 'Bearer ' + tokenvalue },
             method: 'DELETE',
-            url: 'https://gorest.co.in/public/v1/users/' + createdid + '?' + 'access-token=' + tokenvalue
+            url: 'https://gorest.co.in/public/v1/users/' + createdid
         })
             .should((response) => {
                 expect(response.status).equal(204)
@@ -45,6 +50,8 @@ it('POST-Create user, Delete- Created user', () => {
 
 it('Get- Assert on the deleted user', () => {
     cy.request({
+        log: false,
+        headers: { Authorization: 'Bearer ' + tokenvalue },
         method: 'GET',
         url: 'https://gorest.co.in/public/v1/users/',
 

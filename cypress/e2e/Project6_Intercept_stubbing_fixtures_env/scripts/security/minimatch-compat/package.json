@@ -1,0 +1,10 @@
+{
+  "name": "@workspace-security/minimatch-compat",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Legacy callable and glob-7 interfaces over patched minimatch 11",
+  "main": "index.cjs",
+  "files": ["index.cjs", "README.md"],
+  "dependencies": {"minimatch-core": "npm:minimatch@11.0.3"}
+}
